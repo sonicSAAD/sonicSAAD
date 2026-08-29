@@ -1,18 +1,21 @@
 # Mohammad Saad - Cyberpunk Portfolio
 
-> Official machine-readable profile of Mohammad Saad, a cyberpunk AI and backend engineer.
+> Official machine-readable profile of Mohammad Saad, a Java, Android, and Flutter developer.
 
 ## Focus
-- Autonomous AI systems
-- Backend architecture
+- Java and object-oriented software development
+- Android and Flutter application development
 - Neon interface design
 
 ## Available Modules
 - [Overview](https://sonicSAAD.github.io/overview): Engineering profile and working philosophy
 - [KavachG](https://sonicSAAD.github.io/projects): Edge-AI safety monitoring case study
+- [Any Weather](https://sonicSAAD.github.io/projects): Flutter weather application
+- [Scientific Calculator](https://sonicSAAD.github.io/projects): Java Swing desktop application
 - [Contact](https://sonicSAAD.github.io/contact): Direct communication form
 
 ## Contact
 - [GitHub Profile](http://github.com/sonicSAAD)
 - [LinkedIn](https://www.linkedin.com/in/mohammad-saad-0b7b5b32a/)
 - [Email](mailto:mohammadsaad65283@gmail.com)
+- Phone: +91 8840207058

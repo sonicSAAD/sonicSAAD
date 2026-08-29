@@ -46,7 +46,7 @@ const Hero = () => {
       <div className="hero-badge opacity-100 inline-flex items-center gap-2 px-3.5 sm:px-4 py-1.5 rounded-full brutalist-panel mb-5 sm:mb-6 border border-white/15 shadow-lg text-center max-w-full">
         <span className="w-2 h-2 rounded-full bg-[#00ff9f] animate-pulse shrink-0" />
         <span className="text-[11px] sm:text-[13px] font-bold font-mono tracking-wider sm:tracking-widest text-zinc-300 uppercase truncate">
-          CYBERPUNK AI ENGINEER • BACKEND ARCHITECT
+          JAVA • ANDROID • FLUTTER DEVELOPER
         </span>
       </div>
 
@@ -74,7 +74,7 @@ const Hero = () => {
         </h1>
 
         <p className="hero-subtext opacity-100 mt-4 sm:mt-5 text-zinc-300 text-[15px] sm:text-[19px] max-w-2xl leading-relaxed font-normal px-2">
-          Designing autonomous AI systems, deep learning pipelines, and high-throughput backend infrastructure for the neon web.
+          Building efficient mobile and desktop applications with Java, Android, Flutter, and intuitive user interfaces.
         </p>
 
         {/* Location & Status Meta */}
@@ -89,7 +89,7 @@ const Hero = () => {
           <span className="hidden sm:inline text-zinc-600">•</span>
           <span className="flex items-center gap-1.5 text-white font-semibold">
             <span className="w-1.5 h-1.5 rounded-full bg-[#00ff9f] shrink-0" />
-            Open to AI &amp; Backend Roles
+            Open to Software Development Roles
           </span>
         </div>
 

@@ -4,7 +4,7 @@ export const COMMANDS = {
   "neonfetch": "Alias for SAAD telemetry and system diagnostics",
   "neofetch": "Alias for SAAD system telemetry",
   "whoami": "Display Mohammad Saad's engineering profile and roles",
-  "projects": "Open the verified KavachG edge-AI case study",
+  "projects": "Open Mohammad Saad's application project case studies",
   "github": "Open Mohammad Saad's GitHub profile",
   "linkedin": "Open verified LinkedIn profile (Mohammad Saad)",
   "email": "Initiate direct transmission to mohammadsaad65283@gmail.com",
@@ -29,7 +29,7 @@ export const SAAD_ASCII = `  ███████╗ █████╗  ██
   ███████║██║  ██║██║  ██║██████╔╝
   ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═════╝
 
-  Host: Mohammad Saad (Cyberpunk AI & Backend Engineer)
-  Stack: FastAPI • PyTorch • Three.js • Docker • PostgreSQL
-  Focus: Neon interfaces, AI systems, and backend architecture
+  Host: Mohammad Saad (Java, Android & Flutter Developer)
+  Stack: Java • Dart • C++ • Python • SQL
+  Focus: Mobile apps, desktop software, and cross-platform interfaces
   Status: Available for Engineering Roles`;

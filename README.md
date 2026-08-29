@@ -1,38 +1,53 @@
 # Mohammad Saad
 
-### Cyberpunk AI & Backend Engineer
+### Java, Android & Flutter Developer
 
-I build focused digital systems with a bias for clean interfaces, resilient backend architecture, and practical AI.
+Computer Science student building efficient mobile, desktop, and cross-platform applications with practical software engineering and intuitive interfaces.
 
-I am currently exploring autonomous AI workflows, real-time systems, and cyberpunk-inspired product experiences.
-
-## Featured Work
+## Featured Projects
 
 ### KavachG
 
-An edge-AI safety monitoring system designed to replace manual compliance checks with real-time computer vision analysis of live camera feeds.
+An edge-AI safety monitoring system for real-time computer vision analysis of live camera feeds.
 
 - Live deployment: https://kavach-g.vercel.app/
 - Source code: https://github.com/sonicSAAD/KavachG
 
-## Current Focus
+### Any Weather
 
-- Autonomous AI systems and intelligent workflows
-- Backend architecture and real-time data pipelines
-- High-signal interfaces for technical products
+A Flutter weather application with live updates, forecast tracking, efficient Dio requests, caching, and BLoC/Cubit state management.
 
-## Portfolio
+### Scientific Calculator
 
-Explore the cyberpunk portfolio and engineering overview:
+A modular Java Swing desktop application structured around core object-oriented programming principles.
 
-https://sonicsaad.github.io/
+## Education
+
+- B.Tech in Computer Science and Engineering, United Institute of Technology, Prayagraj, 2023 - 2027
+- Intermediate, Bishop Johnson School & College, 60%
+- High School, Bishop Johnson School & College, 80%
+
+## Skills
+
+- Programming: Java, Dart, C++, Python, SQL
+- Mobile: Flutter, Android Development
+- Core CS: DSA, OOP, DBMS, OS, Computer Networks
+- Tools: Git, GitHub, Android Studio, VS Code
+
+## Certifications & Achievements
+
+- Core Java with Collections Summer Training
+- Android Application Development Internship via EngineerCore
+- HackQuest'25 Participation Certificate
+- 6th Place, Bharat@100 Hackathon
+- 7th Position, Code Aarambh Coding Competition
+- 60 Hours of Core Java with Collections Training
 
 ## Connect
 
 - GitHub: http://github.com/sonicSAAD
 - LinkedIn: https://www.linkedin.com/in/mohammad-saad-0b7b5b32a/
 - Email: mohammadsaad65283@gmail.com
+- Phone: +91 8840207058
 
----
-
-Built by Mohammad Saad.
+Portfolio: https://sonicsaad.github.io/

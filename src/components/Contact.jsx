@@ -21,11 +21,18 @@ const Contact = () => {
   });
   const [loading, setLoading] = useState(false);
   const [copiedEmail, setCopiedEmail] = useState(false);
+  const [copiedPhone, setCopiedPhone] = useState(false);
 
   const copyEmail = () => {
     navigator.clipboard.writeText("mohammadsaad65283@gmail.com");
     setCopiedEmail(true);
     setTimeout(() => setCopiedEmail(false), 2000);
+  };
+
+  const copyPhone = () => {
+    navigator.clipboard.writeText("+918840207058");
+    setCopiedPhone(true);
+    setTimeout(() => setCopiedPhone(false), 2000);
   };
 
   const handleChange = (e) => {
@@ -95,7 +102,7 @@ const Contact = () => {
               Let&apos;s Build Together
             </h3>
             <p className="text-zinc-300 text-[13px] sm:text-[14px] leading-relaxed font-poppins mb-5 sm:mb-6">
-              I am open to machine learning roles, AI agent development, and high-throughput backend architecture opportunities.
+              I am open to software development opportunities across Java, Android, Flutter, and cross-platform application development.
             </p>
 
             {/* Email Action */}
@@ -112,6 +119,22 @@ const Contact = () => {
               </div>
               <button className="w-8 h-8 rounded-lg bg-white/10 shrink-0 flex items-center justify-center text-zinc-300 group-hover:text-white transition-colors">
                 {copiedEmail ? <FaCheck className="w-3.5 h-3.5 text-white" /> : <FaCopy className="w-3.5 h-3.5" />}
+              </button>
+            </div>
+
+            <div
+              onClick={copyPhone}
+              className="p-3.5 sm:p-4 rounded-xl sm:rounded-2xl bg-white/[0.03] border border-white/10 hover:border-white/40 transition-all duration-200 cursor-pointer flex items-center justify-between group mb-3">
+              <div>
+                <span className="text-[10px] font-mono font-bold text-zinc-400 uppercase tracking-widest block">
+                  PHONE / WHATSAPP
+                </span>
+                <span className="text-white text-[13px] sm:text-[14px] font-mono font-bold mt-0.5 block">
+                  +91 8840207058
+                </span>
+              </div>
+              <button className="w-8 h-8 rounded-lg bg-white/10 shrink-0 flex items-center justify-center text-zinc-300 group-hover:text-white transition-colors">
+                {copiedPhone ? <FaCheck className="w-3.5 h-3.5 text-white" /> : <FaCopy className="w-3.5 h-3.5" />}
               </button>
             </div>
 

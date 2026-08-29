@@ -26,7 +26,7 @@ const Footer = () => {
                 MOHAMMAD SAAD
               </h3>
               <p className="text-[13px] text-zinc-400 font-poppins mt-2.5 leading-relaxed max-w-md">
-                Cyberpunk AI Engineer &amp; Backend Architect specializing in autonomous systems and real-time backend pipelines.
+                Software developer focused on Java, Android, Flutter, cross-platform applications, and clean user experiences.
               </p>
             </div>
 
@@ -86,6 +86,11 @@ const Footer = () => {
                 </a>
               </div>
               <div>
+                <a href="tel:+918840207058" className="text-white hover:underline">
+                  +91 8840207058
+                </a>
+              </div>
+              <div>
                 <span className="text-zinc-400">Prayagraj, UP, India</span>
               </div>
             </div>
@@ -98,7 +103,7 @@ const Footer = () => {
             © 2026 Mohammad Saad
           </div>
           <div>
-            Built with React, Three.js &amp; TailwindCSS
+            Built with React, TailwindCSS &amp; motion
           </div>
         </div>
       </div>

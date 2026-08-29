@@ -23,7 +23,7 @@ const hubCards = [
     title: "System Overview",
     path: "/overview",
     icon: FaBrain,
-    desc: "Autonomous multi-agent architectures, tool calling, and backend engineering philosophy.",
+    desc: "Java, Android, Flutter, software architecture, and application development profile.",
     tag: "ARCHITECTURE",
   },
   {
@@ -37,7 +37,7 @@ const hubCards = [
     title: "KavachG",
     path: "/projects",
     icon: FaFolderOpen,
-    desc: "Edge-AI safety monitoring system and computer vision case study.",
+    desc: "KavachG, Any Weather, and Scientific Calculator application case studies.",
     tag: "PROJECT",
   },
 ];
