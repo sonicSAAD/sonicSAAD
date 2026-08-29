@@ -30,4 +30,4 @@ Allow: /
 User-agent: LinkedInBot
 Allow: /
 
-Sitemap: https://sonicSAAD.github.io/portfolio/sitemap.xml
+Sitemap: https://sonicSAAD.github.io/sitemap.xml

@@ -7,7 +7,7 @@ Two ways to deploy: Web UI (recommended) or CLI.
 1) Deploy via Vercel Web UI (recommended)
 
 - Go to https://vercel.com and sign in with your GitHub account.
-- Click **New Project** → **Import Git Repository** and select `sonicSAAD/portfolio`.
+- Click **New Project** → **Import Git Repository** and select `sonicSAAD/sonicSAAD.github.io`.
 - During import set:
   - Framework Preset: **Vite** (auto-detected) or choose "Other" and set Build Command to `npm run build` and Output Directory to `dist`.
 - Add Environment Variables (Settings → Environment Variables):

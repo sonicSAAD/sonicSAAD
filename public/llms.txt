@@ -8,9 +8,9 @@
 - Neon interface design
 
 ## Available Modules
-- [Overview](https://sonicSAAD.github.io/portfolio/overview): Engineering profile and working philosophy
-- [KavachG](https://sonicSAAD.github.io/portfolio/projects): Edge-AI safety monitoring case study
-- [Contact](https://sonicSAAD.github.io/portfolio/contact): Direct communication form
+- [Overview](https://sonicSAAD.github.io/overview): Engineering profile and working philosophy
+- [KavachG](https://sonicSAAD.github.io/projects): Edge-AI safety monitoring case study
+- [Contact](https://sonicSAAD.github.io/contact): Direct communication form
 
 ## Contact
 - [GitHub Profile](http://github.com/sonicSAAD)

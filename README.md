@@ -135,7 +135,7 @@ Three common deployment options are described below. Choose one and follow the s
 	- The workflow at `.github/workflows/deploy.yml` builds the site and publishes `dist` to `gh-pages` whenever `main` changes.
 	- In repository Settings → Pages, set the source to **GitHub Actions**.
 	- Add the four `VITE_` variables as **Repository secrets** to enable the contact form.
-	- The expected site URL is `https://sonicSAAD.github.io/portfolio/`.
+	- The expected site URL is `https://sonicSAAD.github.io/`.
 
 If you'd like, I can set up CI deployment to Netlify or Vercel for you (I can't set up external accounts, but I can create the configuration and instructions you can follow to connect them).
 
