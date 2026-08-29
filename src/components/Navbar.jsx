@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { close, menu } from "../assets";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
@@ -23,6 +23,11 @@ const Navbar = () => {
   const location = useLocation();
 
   useEffect(() => {
+    const handleEscape = (event) => {
+      if (event.key === "Escape") setToggle(false);
+    };
+
+    window.addEventListener("keydown", handleEscape);
     try {
       animate(".navbar-element", {
         opacity: [0, 1],
@@ -34,6 +39,8 @@ const Navbar = () => {
     } catch (e) {
       console.warn("Navbar animation fallback", e);
     }
+
+    return () => window.removeEventListener("keydown", handleEscape);
   }, []);
 
   return (
@@ -70,7 +77,8 @@ const Navbar = () => {
                     isActive
                       ? "text-white border-b-2 border-white"
                       : "text-zinc-400 hover:text-white"
-                  }`}>
+                    }`}
+                  aria-current={isActive ? "page" : undefined}>
                   {item.title}
                 </Link>
               </li>
@@ -138,11 +146,14 @@ const Navbar = () => {
 
           <button
             onClick={() => setToggle(!toggle)}
-            aria-label="Toggle Navigation Menu" className="p-2 rounded-xl brutalist-panel text-white hover:border-white/40">
+            aria-label="Toggle Navigation Menu"
+            aria-expanded={toggle}
+            aria-controls="mobile-navigation"
+            className="p-2 rounded-xl brutalist-panel text-white hover:border-white/40">
             {toggle ? (
-              <img src={close} alt="close" className="w-5 h-5 object-contain invert" />
+              <img src={close} alt="" className="w-5 h-5 object-contain invert" />
             ) : (
-              <img src={menu} alt="menu" className="w-5 h-5 object-contain invert" />
+              <img src={menu} alt="" className="w-5 h-5 object-contain invert" />
             )}
           </button>
         </div>
@@ -150,7 +161,7 @@ const Navbar = () => {
 
       {/* Mobile Drawer */}
       {toggle && (
-        <div className="xl:hidden fixed inset-x-0 top-[60px] bg-black/95 border-b border-white/15 p-5 sm:p-6 backdrop-blur-2xl flex flex-col gap-4 shadow-2xl max-h-[calc(100dvh-70px)] overflow-y-auto no-scrollbar">
+        <div id="mobile-navigation" className="xl:hidden fixed inset-x-0 top-[60px] bg-black/95 border-b border-white/15 p-5 sm:p-6 backdrop-blur-2xl flex flex-col gap-4 shadow-2xl max-h-[calc(100dvh-70px)] overflow-y-auto no-scrollbar">
           <div className="text-[11px] font-mono text-zinc-500 uppercase tracking-widest pb-2 border-b border-white/10">
             PAGES &amp; SECTIONS
           </div>

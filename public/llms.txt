@@ -8,11 +8,11 @@
 - Neon interface design
 
 ## Available Modules
-- [Overview](https://sonicSAAD.github.io/overview): Engineering profile and working philosophy
-- [KavachG](https://sonicSAAD.github.io/projects): Edge-AI safety monitoring case study
-- [Any Weather](https://sonicSAAD.github.io/projects): Flutter weather application
-- [Scientific Calculator](https://sonicSAAD.github.io/projects): Java Swing desktop application
-- [Contact](https://sonicSAAD.github.io/contact): Direct communication form
+- [Overview](https://sonicSAAD.github.io/#/overview): Engineering profile and working philosophy
+- [KavachG](https://sonicSAAD.github.io/#/projects): Edge-AI safety monitoring case study
+- [Any Weather](https://sonicSAAD.github.io/#/projects): Flutter weather application
+- [Scientific Calculator](https://sonicSAAD.github.io/#/projects): Java Swing desktop application
+- [Contact](https://sonicSAAD.github.io/#/contact): Direct communication form
 
 ## Contact
 - [GitHub Profile](http://github.com/sonicSAAD)

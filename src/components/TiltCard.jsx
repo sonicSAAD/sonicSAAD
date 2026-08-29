@@ -1,4 +1,5 @@
-import React, { useRef, useState, useEffect } from "react";
+import { useRef, useState, useEffect } from "react";
+import PropTypes from "prop-types";
 
 const TiltCard = ({ children, className = "", maxTilt = 8 }) => {
   const cardRef = useRef(null);
@@ -60,6 +61,12 @@ const TiltCard = ({ children, className = "", maxTilt = 8 }) => {
       )}
     </div>
   );
+};
+
+TiltCard.propTypes = {
+  children: PropTypes.node.isRequired,
+  className: PropTypes.string,
+  maxTilt: PropTypes.number,
 };
 
 export default TiltCard;

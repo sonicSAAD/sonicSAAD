@@ -10,6 +10,7 @@ import {
   FaShieldAlt,
 } from "react-icons/fa";
 import { animate } from "animejs";
+import PropTypes from "prop-types";
 import PageTransition from "../components/PageTransition";
 
 const projects = [
@@ -110,6 +111,21 @@ const ProjectCard = ({ project }) => {
       </div>
     </article>
   );
+};
+
+ProjectCard.propTypes = {
+  project: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    number: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    eyebrow: PropTypes.string.isRequired,
+    icon: PropTypes.elementType.isRequired,
+    description: PropTypes.string.isRequired,
+    tags: PropTypes.arrayOf(PropTypes.string).isRequired,
+    demo: PropTypes.string,
+    repo: PropTypes.string,
+    visual: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 const ProjectsPage = () => {

@@ -1,6 +1,6 @@
 import { useEffect, useState, lazy, Suspense } from "react";
 import { AnimatePresence } from "framer-motion";
-import { BrowserRouter, Routes, Route, Link, useLocation } from "react-router-dom";
+import { HashRouter, Routes, Route, Link, useLocation } from "react-router-dom";
 import { Hero, Navbar, Footer } from "./components";
 import PageLoader from "./components/PageLoader";
 import SkeletonLoader from "./components/SkeletonLoader";
@@ -183,7 +183,7 @@ const AnimatedRoutes = () => {
 };
 
 const App = () => {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -202,7 +202,7 @@ const App = () => {
   }, [isLoading]);
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="relative z-0 bg-[#000000] text-[#ffffff] min-h-screen overflow-x-hidden flex flex-col justify-between">
         <ScrollProgress />
         <AmbientGlow />
@@ -223,7 +223,7 @@ const App = () => {
       </div>
 
       
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 

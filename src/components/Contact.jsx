@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import { styles } from "../styles";
@@ -11,6 +11,7 @@ const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
 const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 const CONTACT_TO_EMAIL =
   import.meta.env.VITE_CONTACT_TO_EMAIL || "mohammadsaad65283@gmail.com";
+const CONTACT_PHONE = "+918840207058";
 
 const Contact = () => {
   const formRef = useRef();
@@ -22,18 +23,21 @@ const Contact = () => {
   const [loading, setLoading] = useState(false);
   const [copiedEmail, setCopiedEmail] = useState(false);
   const [copiedPhone, setCopiedPhone] = useState(false);
+  const [feedback, setFeedback] = useState(null);
 
-  const copyEmail = () => {
-    navigator.clipboard.writeText("mohammadsaad65283@gmail.com");
-    setCopiedEmail(true);
-    setTimeout(() => setCopiedEmail(false), 2000);
+  const copyValue = async (value, setCopied, label) => {
+    try {
+      await navigator.clipboard.writeText(value);
+      setCopied(true);
+      setFeedback({ type: "success", message: `${label} copied to clipboard.` });
+      setTimeout(() => setCopied(false), 2000);
+    } catch {
+      setFeedback({ type: "error", message: "Clipboard access is unavailable. Please copy it manually." });
+    }
   };
 
-  const copyPhone = () => {
-    navigator.clipboard.writeText("+918840207058");
-    setCopiedPhone(true);
-    setTimeout(() => setCopiedPhone(false), 2000);
-  };
+  const copyEmail = () => copyValue(CONTACT_TO_EMAIL, setCopiedEmail, "Email");
+  const copyPhone = () => copyValue(CONTACT_PHONE, setCopiedPhone, "Phone number");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -44,11 +48,12 @@ const Contact = () => {
     e.preventDefault();
 
     if (!EMAILJS_SERVICE_ID || !EMAILJS_TEMPLATE_ID || !EMAILJS_PUBLIC_KEY) {
-      alert("Contact form is not configured yet. Add EmailJS keys in your .env file.");
+      setFeedback({ type: "error", message: "The contact form is not configured yet. Please use the email link instead." });
       return;
     }
 
     setLoading(true);
+    setFeedback(null);
 
     const templateParams = {
       name: form.name,
@@ -72,13 +77,13 @@ const Contact = () => {
       .then(
         () => {
           setLoading(false);
-          alert("Thank you! I will get back to you as soon as possible.");
+          setFeedback({ type: "success", message: "Message sent. Mohammad will get back to you soon." });
           setForm({ name: "", email: "", message: "" });
         },
         (error) => {
           setLoading(false);
           console.error(error);
-          alert("Something went wrong. Please try again.");
+          setFeedback({ type: "error", message: "Something went wrong. Please try again or use the email link." });
         }
       );
   };
@@ -106,9 +111,10 @@ const Contact = () => {
             </p>
 
             {/* Email Action */}
-            <div
+            <button
+              type="button"
               onClick={copyEmail}
-              className="p-3.5 sm:p-4 rounded-xl sm:rounded-2xl bg-white/[0.03] border border-white/10 hover:border-white/40 transition-all duration-200 cursor-pointer flex items-center justify-between group mb-3">
+              className="w-full text-left p-3.5 sm:p-4 rounded-xl sm:rounded-2xl bg-white/[0.03] border border-white/10 hover:border-white/40 transition-all duration-200 cursor-pointer flex items-center justify-between group mb-3">
               <div className="overflow-hidden mr-2">
                 <span className="text-[10px] font-mono font-bold text-zinc-400 uppercase tracking-widest block">
                   EMAIL ADDRESS
@@ -117,14 +123,15 @@ const Contact = () => {
                   mohammadsaad65283@gmail.com
                 </span>
               </div>
-              <button className="w-8 h-8 rounded-lg bg-white/10 shrink-0 flex items-center justify-center text-zinc-300 group-hover:text-white transition-colors">
+              <span className="w-8 h-8 rounded-lg bg-white/10 shrink-0 flex items-center justify-center text-zinc-300 group-hover:text-white transition-colors">
                 {copiedEmail ? <FaCheck className="w-3.5 h-3.5 text-white" /> : <FaCopy className="w-3.5 h-3.5" />}
-              </button>
-            </div>
+              </span>
+            </button>
 
-            <div
+            <button
+              type="button"
               onClick={copyPhone}
-              className="p-3.5 sm:p-4 rounded-xl sm:rounded-2xl bg-white/[0.03] border border-white/10 hover:border-white/40 transition-all duration-200 cursor-pointer flex items-center justify-between group mb-3">
+              className="w-full text-left p-3.5 sm:p-4 rounded-xl sm:rounded-2xl bg-white/[0.03] border border-white/10 hover:border-white/40 transition-all duration-200 cursor-pointer flex items-center justify-between group mb-3">
               <div>
                 <span className="text-[10px] font-mono font-bold text-zinc-400 uppercase tracking-widest block">
                   PHONE / WHATSAPP
@@ -133,10 +140,10 @@ const Contact = () => {
                   +91 8840207058
                 </span>
               </div>
-              <button className="w-8 h-8 rounded-lg bg-white/10 shrink-0 flex items-center justify-center text-zinc-300 group-hover:text-white transition-colors">
+              <span className="w-8 h-8 rounded-lg bg-white/10 shrink-0 flex items-center justify-center text-zinc-300 group-hover:text-white transition-colors">
                 {copiedPhone ? <FaCheck className="w-3.5 h-3.5 text-white" /> : <FaCopy className="w-3.5 h-3.5" />}
-              </button>
-            </div>
+              </span>
+            </button>
 
             {/* Location */}
             <div className="p-3.5 sm:p-4 rounded-xl sm:rounded-2xl bg-white/[0.03] border border-white/10">
@@ -161,11 +168,12 @@ const Contact = () => {
             className="flex flex-col gap-4 sm:gap-5 font-poppins">
             
             <div>
-              <label className="text-white text-[12px] sm:text-[13px] font-mono font-bold block mb-1.5 sm:mb-2">
+              <label htmlFor="contact-name" className="text-white text-[12px] sm:text-[13px] font-mono font-bold block mb-1.5 sm:mb-2">
                 YOUR NAME
               </label>
               <input
                 type="text"
+                id="contact-name"
                 name="name"
                 required
                 value={form.name}
@@ -176,11 +184,12 @@ const Contact = () => {
             </div>
 
             <div>
-              <label className="text-white text-[12px] sm:text-[13px] font-mono font-bold block mb-1.5 sm:mb-2">
+              <label htmlFor="contact-email" className="text-white text-[12px] sm:text-[13px] font-mono font-bold block mb-1.5 sm:mb-2">
                 YOUR EMAIL
               </label>
               <input
                 type="email"
+                id="contact-email"
                 name="email"
                 required
                 value={form.email}
@@ -191,11 +200,12 @@ const Contact = () => {
             </div>
 
             <div>
-              <label className="text-white text-[12px] sm:text-[13px] font-mono font-bold block mb-1.5 sm:mb-2">
+              <label htmlFor="contact-message" className="text-white text-[12px] sm:text-[13px] font-mono font-bold block mb-1.5 sm:mb-2">
                 YOUR MESSAGE
               </label>
               <textarea
                 rows="5"
+                id="contact-message"
                 name="message"
                 required
                 value={form.message}
@@ -208,10 +218,19 @@ const Contact = () => {
             <button
               type="submit"
               disabled={loading}
+              aria-busy={loading}
               className="mt-1 sm:mt-2 flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl bg-white text-black hover:bg-zinc-200 font-mono font-bold text-[13px] sm:text-[14px] transition-all duration-200 shadow-md w-full sm:w-auto">
               <FaPaperPlane className="w-3.5 h-3.5" />
               {loading ? "SENDING MESSAGE..." : "SEND MESSAGE"}
             </button>
+            {feedback && (
+              <p
+                role="status"
+                aria-live="polite"
+                className={`text-[12px] font-mono ${feedback.type === "error" ? "text-[#ff6b8a]" : "text-[#00ff9f]"}`}>
+                {feedback.message}
+              </p>
+            )}
           </form>
         </motion.div>
       </div>

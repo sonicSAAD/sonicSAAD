@@ -1,6 +1,3 @@
-import React from "react";
-import { motion } from "framer-motion";
-
 const SkeletonLoader = () => {
   return (
     <div className="pt-28 pb-20 px-4 sm:px-8 max-w-7xl mx-auto min-h-[70vh] flex flex-col justify-center">

@@ -2,31 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: "Arenq";
-  src: url("./fonts/arenq.otf");
-}
-
-@font-face {
-  font-family: "Mova";
-  src: url("./fonts/mova.otf");
-}
-
-@font-face {
-  font-family: "Beckman";
-  src: url("./fonts/beckman.otf");
-}
-
-@font-face {
-  font-family: "Overcame Bold";
-  src: url("./fonts/overcame-bold.woff");
-}
-
-@font-face {
-  font-family: "Overcame Outline";
-  src: url("./fonts/overcame-outline.woff");
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -210,6 +185,16 @@ img, svg, video, canvas {
 /* Touch Friendly Tap Targets */
 button, a {
   touch-action: manipulation;
+}
+
+:focus-visible {
+  outline: 2px solid var(--cyber-cyan, #05d9e8);
+  outline-offset: 3px;
+}
+
+button:disabled {
+  cursor: wait;
+  opacity: 0.65;
 }
 
 /* Cyberpunk neon system theme */

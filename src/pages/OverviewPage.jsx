@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import PageTransition from "../components/PageTransition";
 import TiltCard from "../components/TiltCard";
@@ -47,15 +47,13 @@ const engineeringPillars = [
 const OverviewPage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
-    try {
-      animate(".pillar-card", {
-        opacity: [0, 1],
-        translateY: [25, 0],
-        delay: stagger(70, { start: 100 }),
-        ease: "outExpo",
-        duration: 700,
-      });
-    } catch (e) {}
+    animate(".pillar-card", {
+      opacity: [0, 1],
+      translateY: [25, 0],
+      delay: stagger(70, { start: 100 }),
+      ease: "outExpo",
+      duration: 700,
+    });
   }, []);
 
   return (

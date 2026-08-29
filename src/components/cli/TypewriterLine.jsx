@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
+import PropTypes from "prop-types";
 
 const TypewriterLine = ({ text, type, isStreaming, isClearingLast, onComplete }) => {
   const [displayedText, setDisplayedText] = useState(isStreaming ? "" : text);
@@ -30,7 +31,7 @@ const TypewriterLine = ({ text, type, isStreaming, isClearingLast, onComplete })
     }, speed);
 
     return () => clearInterval(interval);
-  }, [text, isStreaming]);
+  }, [text, isStreaming, onComplete]);
 
   return (
     <div
@@ -49,6 +50,14 @@ const TypewriterLine = ({ text, type, isStreaming, isClearingLast, onComplete })
       )}
     </div>
   );
+};
+
+TypewriterLine.propTypes = {
+  text: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
+  isStreaming: PropTypes.bool,
+  isClearingLast: PropTypes.bool,
+  onComplete: PropTypes.func,
 };
 
 export default TypewriterLine;

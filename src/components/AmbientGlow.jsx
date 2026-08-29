@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 const AmbientGlow = () => {
   const [pos, setPos] = useState({ x: -1000, y: -1000 });
