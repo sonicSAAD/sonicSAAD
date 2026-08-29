@@ -1,0 +1,18 @@
+# Mohammad Saad - Cyberpunk Portfolio
+
+> Official machine-readable profile of Mohammad Saad, a cyberpunk AI and backend engineer.
+
+## Focus
+- Autonomous AI systems
+- Backend architecture
+- Neon interface design
+
+## Available Modules
+- [Overview](https://sonicSAAD.github.io/portfolio/overview): Engineering profile and working philosophy
+- [KavachG](https://sonicSAAD.github.io/portfolio/projects): Edge-AI safety monitoring case study
+- [Contact](https://sonicSAAD.github.io/portfolio/contact): Direct communication form
+
+## Contact
+- [GitHub Profile](http://github.com/sonicSAAD)
+- [LinkedIn](https://www.linkedin.com/in/mohammad-saad-0b7b5b32a/)
+- [Email](mailto:mohammadsaad65283@gmail.com)
