@@ -1,0 +1,40 @@
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[margin=0.62in,top=0.52in,bottom=0.52in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{titlesec}
+\usepackage[hidelinks]{hyperref}
+\usepackage{microtype}
+
+\definecolor{ink}{HTML}{000000}
+\definecolor{muted}{HTML}{222222}
+\definecolor{accent}{HTML}{000000}
+\definecolor{rule}{HTML}{000000}
+
+\color{ink}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\tabcolsep}{0pt}
+\renewcommand{\arraystretch}{1.05}
+\setlist[itemize]{leftmargin=1.1em,itemsep=1pt,topsep=2pt,parsep=0pt}
+
+\titleformat{\section}
+  {\large\bfseries\color{accent}}
+  {}{0pt}{}
+  [\vspace{-5pt}\color{rule}\rule{\linewidth}{0.5pt}]
+\titlespacing*{\section}{0pt}{7pt}{4pt}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=black,
+  linkcolor=black,
+  pdfauthor={Mohammad Saad},
+  pdftitle={Mohammad Saad Resume}
+}

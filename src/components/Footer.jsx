@@ -8,6 +8,11 @@ const CONTACT_EMAIL = "mohammadsaad65283@gmail.com";
 const pageLinks = [
   { title: "Overview", path: "/overview" },
   { title: "KavachG", path: "/projects" },
+  { title: "Technologies", path: "/technologies" },
+  { title: "Education", path: "/education" },
+  { title: "Certificates", path: "/certifications" },
+  { title: "Achievements", path: "/achievements" },
+  { title: "Resume", path: "/resume" },
   { title: "Contact", path: "/contact" },
 ];
 

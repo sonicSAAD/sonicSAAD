@@ -56,6 +56,23 @@ export const executeCliCommand = (cmdStr, { navigate, setIsOpen, triggerReverseW
       }, 900);
       break;
 
+    case "technologies":
+    case "education":
+    case "certifications":
+    case "achievements":
+    case "resume":
+      responseEntry = {
+        id: Date.now() + 1,
+        type: "out",
+        text: `[MODULE] Routing to /${trimmed}...`,
+        isStreaming: true
+      };
+      setTimeout(() => {
+        navigate(`/${trimmed}`);
+        setIsOpen(false);
+      }, 700);
+      break;
+
     case "github":
     case "gh":
       responseEntry = {

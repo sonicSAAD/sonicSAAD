@@ -8,6 +8,11 @@ import { animate, stagger } from "animejs";
 const navItems = [
   { title: "Overview", path: "/overview" },
   { title: "KavachG", path: "/projects" },
+  { title: "Technologies", path: "/technologies" },
+  { title: "Education", path: "/education" },
+  { title: "Certificates", path: "/certifications" },
+  { title: "Achievements", path: "/achievements" },
+  { title: "Resume", path: "/resume" },
   { title: "Contact", path: "/contact" },
 ];
 
@@ -102,6 +107,12 @@ const Navbar = () => {
             </a>
           </div>
 
+          <Link
+            to="/resume"
+            className="px-3.5 py-1.5 rounded-lg bg-white text-black font-mono font-bold text-[12px] hover:bg-[#f9f002] transition-colors shadow-sm">
+            RESUME
+          </Link>
+
         </div>
 
         {/* Mobile / Tablet Menu Button */}
@@ -169,6 +180,13 @@ const Navbar = () => {
                 <MdEmail className="w-5 h-5" />
               </a>
             </div>
+
+            <Link
+              to="/resume"
+              onClick={() => setToggle(false)}
+              className="px-4 py-2.5 rounded-xl bg-white text-black font-mono font-bold text-[12px] text-center hover:bg-[#f9f002] transition-all">
+              VIEW RESUME
+            </Link>
 
           </div>
         </div>

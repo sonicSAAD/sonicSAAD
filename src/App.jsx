@@ -10,12 +10,27 @@ import ScrollProgress from "./components/ScrollProgress";
 import ScrollToTop from "./components/ScrollToTop";
 import AmbientGlow from "./components/AmbientGlow";
 import TiltCard from "./components/TiltCard";
-import { FaBrain, FaFolderOpen, FaPaperPlane, FaArrowRight } from "react-icons/fa";
+import {
+  FaArrowRight,
+  FaBrain,
+  FaCertificate,
+  FaCubes,
+  FaFileAlt,
+  FaFolderOpen,
+  FaGraduationCap,
+  FaPaperPlane,
+  FaTrophy,
+} from "react-icons/fa";
 import { animate, stagger } from "animejs";
 
 // Lazy-loaded dedicated standalone pages
 const OverviewPage = lazy(() => import("./pages/OverviewPage"));
 const ProjectsPage = lazy(() => import("./pages/ProjectsPage"));
+const TechnologiesPage = lazy(() => import("./pages/TechnologiesPage"));
+const EducationPage = lazy(() => import("./pages/EducationPage"));
+const CertificationsPage = lazy(() => import("./pages/CertificationsPage"));
+const AchievementsPage = lazy(() => import("./pages/AchievementsPage"));
+const ResumePage = lazy(() => import("./pages/ResumePage"));
 const ContactPage = lazy(() => import("./pages/ContactPage"));
 
 const hubCards = [
@@ -39,6 +54,41 @@ const hubCards = [
     icon: FaFolderOpen,
     desc: "KavachG, Any Weather, and Scientific Calculator application case studies.",
     tag: "PROJECT",
+  },
+  {
+    title: "Technologies",
+    path: "/technologies",
+    icon: FaCubes,
+    desc: "Java, Dart, Flutter, Android, and core computer science foundations.",
+    tag: "STACK",
+  },
+  {
+    title: "Education",
+    path: "/education",
+    icon: FaGraduationCap,
+    desc: "Computer Science education at United Institute of Technology, Prayagraj.",
+    tag: "ACADEMICS",
+  },
+  {
+    title: "Certificates",
+    path: "/certifications",
+    icon: FaCertificate,
+    desc: "Java, Android, and HackQuest training credentials.",
+    tag: "TRAINING",
+  },
+  {
+    title: "Achievements",
+    path: "/achievements",
+    icon: FaTrophy,
+    desc: "Hackathon placements, coding competition results, and training milestones.",
+    tag: "MILESTONES",
+  },
+  {
+    title: "Resume",
+    path: "/resume",
+    icon: FaFileAlt,
+    desc: "Download or view the one-page modular LaTeX resume.",
+    tag: "PDF",
   },
 ];
 
@@ -67,11 +117,11 @@ const HomePage = () => {
             Explore the Interface.
           </h2>
           <p className="text-zinc-400 text-[15px] sm:text-[17px] mt-3 leading-relaxed">
-            Explore the engineering profile or open a direct communication channel.
+            Explore Mohammad Saad&apos;s work, credentials, and direct communication channel.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-3xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-6xl mx-auto">
           {hubCards.map((card) => {
             const Icon = card.icon;
             return (
@@ -120,6 +170,11 @@ const AnimatedRoutes = () => {
           <Route path="/overview" element={<OverviewPage />} />
           <Route path="/about" element={<OverviewPage />} />
           <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="/technologies" element={<TechnologiesPage />} />
+          <Route path="/education" element={<EducationPage />} />
+          <Route path="/certifications" element={<CertificationsPage />} />
+          <Route path="/achievements" element={<AchievementsPage />} />
+          <Route path="/resume" element={<ResumePage />} />
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
       </Suspense>
